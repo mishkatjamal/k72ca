@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@font-face {
+    font-family: font300;
+    src: url(../public/fonts/Lausanne-300.woff2);
+}
+@font-face {
+    font-family: font500;
+    src: url(../public/fonts/Lausanne-500.woff2);
+}
+
+body{
+    color: white;
+}
+
+.movelink{
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+.link:hover .movelink{
+    opacity: 1;
+}
+
+
+.moveX{
+    animation-name: moveanimations;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.moveX1{
+    animation-name: moveanimations;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes moveanimations {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+.moveX2{
+    animation-name: moveanimations1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes moveanimations1 {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+    
+}
+
+
+.hover-karo:hover img{
+    transform: scale(1.1);
+}
+.hover-karo:hover .show-karo{
+    opacity: 1;
+}
